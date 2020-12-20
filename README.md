@@ -76,3 +76,34 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## How to install
+
+```
+After cloning from the repository
+```
+
+## Project setup
+```
+composer install
+```
+### copy .env.example to .env and change DB configuration and also add this 2 fields for passport setup
+```
+PASSPORT_PERSONAL_ACCESS_CLIENT_ID=client-id-value
+PASSPORT_PERSONAL_ACCESS_CLIENT_SECRET=unhashed-client-secret-value
+```
+### now create all tables by applying this code to console
+```
+php artisan migrate
+```
+
+### passport install
+```
+php artisan passport:install
+```
+### add client id and secret to to .env file
+
+### serve the project
+```
+php artisan serve
+```
